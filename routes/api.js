@@ -19,9 +19,9 @@ router.get('/trigger', function(req, res, next){
   var timestamp = Date.now();
   var ip = req.ip;
   var location;
-
+  
   //Making use of the ipstack API for getting geolocation
-  http.get('http://api.ipstack.com/'+ip+'?access_key=e5c61b366f7f086115aaebe2bc99bc1f', function(response){
+  http.get('http://api.ipstack.com/'+ip+'?access_key=<API key>', function(response){
 
     //Encoding set to utf8
     response.setEncoding('utf8');
